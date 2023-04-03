@@ -14,4 +14,4 @@ https://believed-bongo-319.notion.site/CCOBJPGL-0cf0be56caf04c0aa3059989e1db2680
 | week_6   | Double dispatch  |
 | week_7   | Multiple Inheritance |
 | week_8-9  | Formal Models of OOP System (Unified modeling language and formal specification languages)|
-| week_10-13   | Design Patters (Creational, Structural, Behavioral, Model-View-Controller) |
+| week_10-13   | Design Patterns (Creational, Structural, Behavioral, Model-View-Controller) |
