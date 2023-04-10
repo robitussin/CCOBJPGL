@@ -1,0 +1,3 @@
+interface Husky extends Dog {
+
+}

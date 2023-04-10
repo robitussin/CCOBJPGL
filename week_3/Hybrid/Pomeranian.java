@@ -1,0 +1,3 @@
+interface Pomeranian extends Dog {
+
+}
