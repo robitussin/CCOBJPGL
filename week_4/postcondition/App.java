@@ -10,7 +10,7 @@ public class App {
         myApp.goToParty();
 
         // Postcondition
-        assert iAmDrunk = false: "You wont drink ever again!";
+        assert iAmDrunk == false: "You wont drink ever again!";
     }
 
 
