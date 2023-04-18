@@ -5,7 +5,7 @@ public class App {
     public static void main(String[] args) throws Exception {
       
         // Precondition
-        assert iWontDrink = false: "You are grounded for the rest of your life!";
+        assert iWontDrink == false: "You are grounded for the rest of your life!";
 
         App myApp = new App();
 
