@@ -15,8 +15,7 @@ https://gluonhq.com/products/scene-builder/#download**
 **5. Download JavaFX. 
 https://gluonhq.com/products/javafx/** 
 
-6. Extract the JavaFX folder in drive C.
-**C:/openjfx-20.0.1_windows-x64_bin-sdk/javafx-sdk-20.0.1/lib**
+**6. Extract the JavaFX folder in your local drive (example: C:/openjfx-20.0.1_windows-x64_bin-sdk)**
 
 
 # How to create a JavaFX Project?
