@@ -32,7 +32,9 @@ https://gluonhq.com/products/javafx/**
 
 6. In VS Code, enter ***Java Project name*** and press ***Enter***
 
-7. In your lib folder, copy and paste all files inside the lib folder from the downloaded JavaFX folder ***(C:/openjfx-20.0.1_windows-x64_bin-sdk/javafx-sdk-20.0.1/lib)***
+7. Copy all files inside the lib folder from the downloaded JavaFX folder (example: ***C:/openjfx-20.0.1_windows-x64_bin-sdk/javafx-sdk-20.0.1/lib***).
+
+8. Paste all the files to the lib folder in your Java Project (example: ***C:/myjavaproject/lib***).
 
 <img src="https://media.giphy.com/media/ObNTw8Uzwy6KQ/giphy.gif" width="30px">&nbsp; Good luck! You can do it! <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="50" />
 
