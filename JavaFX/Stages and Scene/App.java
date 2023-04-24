@@ -23,9 +23,6 @@ public class App extends Application {
         Scene scene = new Scene(root, Color.WHITE);
 
         stage.setTitle("Stage demo program");
-        
-        Image icon = new Image("icon.png");
-        stage.getIcons().add(icon);
         stage.setWidth(420);
         stage.setHeight(420);
         stage.setResizable(false);
