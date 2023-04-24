@@ -42,6 +42,10 @@ https://gluonhq.com/products/javafx/**
 
 ***"vmArgs": "--module-path C:/openjfx-20.0.1_windows-x64_bin-sdk/javafx-sdk-20.0.1/lib --add-modules javafx.controls,javafx.fxml"***
 
+11. Copy and paste the contents of the link below to your **App.java** file or your main class.
+
+***https://github.com/robitussin/CCOBJPGL/blob/main/JavaFX/Stages%20and%20Scene/App.java***
+
 <img src="https://media.giphy.com/media/ObNTw8Uzwy6KQ/giphy.gif" width="30px">&nbsp; Good luck! You can do it! <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="50" />
 
 <img align="left" width=300px alt="Unicorn" src="https://media4.giphy.com/media/KztT2c4u8mYYUiMKdJ/200.webp?cid=ecf05e47d58zqgktot00yjcj2foe4lb6kqjmr8ofls9whzxu&rid=200.webp&ct=g"/>
