@@ -36,6 +36,12 @@ https://gluonhq.com/products/javafx/**
 
 8. Paste all the files to the lib folder in your Java Project (example: ***C:/myjavaproject/lib***).
 
+9. Go to **Run and Debug** and click ***create a launch.json file***.
+
+10. In the launch.json file, add a ***vmArgs*** parameter after ***projectName*** and add the file path of the lib folder of the downloaded JavaFX file.
+
+***"vmArgs": "--module-path C:/openjfx-20.0.1_windows-x64_bin-sdk/javafx-sdk-20.0.1/lib --add-modules javafx.controls,javafx.fxml"***
+
 <img src="https://media.giphy.com/media/ObNTw8Uzwy6KQ/giphy.gif" width="30px">&nbsp; Good luck! You can do it! <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="50" />
 
 <img align="left" width=300px alt="Unicorn" src="https://media4.giphy.com/media/KztT2c4u8mYYUiMKdJ/200.webp?cid=ecf05e47d58zqgktot00yjcj2foe4lb6kqjmr8ofls9whzxu&rid=200.webp&ct=g"/>
