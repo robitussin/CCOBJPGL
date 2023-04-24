@@ -38,7 +38,7 @@ https://gluonhq.com/products/javafx/**
 
 9. Go to **Run and Debug** and click ***create a launch.json file***.
 
-10. In the launch.json file, add a ***vmArgs*** parameter after ***projectName*** and add the file path of the lib folder of the downloaded JavaFX file.
+10. In the **launch.json** file, add a ***vmArgs*** parameter after ***projectName*** and add the file path of the lib folder of the downloaded JavaFX file.
 
 ***"vmArgs": "--module-path C:/openjfx-20.0.1_windows-x64_bin-sdk/javafx-sdk-20.0.1/lib --add-modules javafx.controls,javafx.fxml"***
 
