@@ -15,9 +15,7 @@ public class App {
 
         // ipadclassic is a subtype of ipad and iPadWithNoCamera
         iPadWithNoCamera mythirdIpad = new iPadClassic();
-
         mythirdIpad.playGame();
-        myIpad.takePhoto();
 
     }
 }
