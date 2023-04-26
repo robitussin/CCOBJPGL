@@ -1,23 +1,14 @@
 public class App {
     public static void main(String[] args) throws Exception {
 
-        // ipadmini is a subtype of iPad and iPadWithCamera
-        iPadWithCamera myIpad = new iPadMini();
+        iPad myFirstIpad = new iPadPro();
+        myFirstIpad.price = 55990;
+        // Weaker pre-condition
+        myFirstIpad.surfWeb(false, true);
 
-        myIpad.playGame(8.9, "dual core");
-        myIpad.takePhoto();
-
-        // ipadpro is a subtype of iPad and iPadWithCamera
-        iPadWithCamera mysecondIpad = new iPadPro();
-
-        mysecondIpad.playGame(12.9, "octa core");
-        myIpad.takePhoto();
-
-        // ipadclassic is a subtype of ipad and iPadWithNoCamera
-        iPadWithNoCamera mythirdIpad = new iPadClassic();
-
-        mythirdIpad.playGame(8.9, "dual core");
-        myIpad.takePhoto();
+        iPad mySecondIpad = new iPadProCellular();
+        mySecondIpad.price = 65990;
+        myFirstIpad.surfWeb(true, true);
 
     }
 }

@@ -1,20 +1,12 @@
-public class iPadPro extends iPadWithCamera {
+public class iPadPro extends iPad {
 
-    void playGame(double s_size, String cpu) {
+    // Weaker pre-condition
+    void surfWeb(boolean wifi) {
 
-        int framerate = 0;
-
-        if (cpu.equals("octa core")) {
-            framerate = 60;
+        if (wifi == true) {
+            System.out.println("Connected to the internet using public Wi-Fi!");
+        } else {
+            System.out.println("Unable to connected to the internet!");
         }
-
-        System.out.println(
-                "I have played call of duty at " + framerate + " frames per second in a " +
-                        s_size + " inch screen");
-
-    }
-
-    void takePhoto() {
-        System.out.println("Photo taken using 12 megapixel camera with three lens");
     }
 }

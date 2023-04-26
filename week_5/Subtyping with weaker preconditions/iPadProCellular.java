@@ -1,17 +1,4 @@
-public class iPad {
-
-    String screenSize;
-    String processor;
-    String camera;
-    int price;
-
-    void playGame() {
-        System.out.println("Running game!");
-    }
-
-    void takePhoto() {
-        System.out.println("Photo taken!");
-    }
+public class iPadProCellular extends iPad {
 
     void surfWeb(boolean cellularData, boolean wifi) {
 
