@@ -2,7 +2,7 @@ package Explorers;
 
 import Planets.*;
 
-public class LifeExplorer implements Explorer {
+public class HumanExplorer implements Explorer {
     @Override
     public void visit(Mercury mercury) {
         System.out.println("Deploying tools specific to Mercury... exploring life");
