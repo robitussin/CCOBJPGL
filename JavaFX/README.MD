@@ -44,7 +44,7 @@ https://gluonhq.com/products/javafx/**
 
 11. Copy and paste the contents of the link below to your **App.java** file or your main class.
 
-***https://github.com/robitussin/CCOBJPGL/blob/main/JavaFX/Stages%20and%20Scene/App.java***
+***https://github.com/robitussin/CCOBJPGL/blob/main/JavaFX/Stage%20and%20Scene/App.java***
 
 <img src="https://media.giphy.com/media/ObNTw8Uzwy6KQ/giphy.gif" width="30px">&nbsp; Good luck! You can do it! <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="50" />
 
