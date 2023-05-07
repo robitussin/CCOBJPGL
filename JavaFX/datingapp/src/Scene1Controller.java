@@ -23,13 +23,13 @@ public class Scene1Controller {
     Scene2Controller scene2Controller = null;
     FXMLLoader loader;
 
-    Image lark = new Image(getClass().getResourceAsStream("lark.png"));
-    Image arjay = new Image(getClass().getResourceAsStream("Arjay.png"));
-    Image kaide = new Image(getClass().getResourceAsStream("Kaide.png"));
-    Image lhara = new Image(getClass().getResourceAsStream("Lhara.png"));
-    Image jherick = new Image(getClass().getResourceAsStream("jherick.png"));
-    Image joan = new Image(getClass().getResourceAsStream("joan.png"));
-    Image kiether = new Image(getClass().getResourceAsStream("kiether.png"));
+    Image lark = new Image(getClass().getResourceAsStream("images/lark.png"));
+    Image arjay = new Image(getClass().getResourceAsStream("images/Arjay.png"));
+    Image kaide = new Image(getClass().getResourceAsStream("images/Kaide.png"));
+    Image lhara = new Image(getClass().getResourceAsStream("images/Lhara.png"));
+    Image jherick = new Image(getClass().getResourceAsStream("images/jherick.png"));
+    Image joan = new Image(getClass().getResourceAsStream("images/joan.png"));
+    Image kiether = new Image(getClass().getResourceAsStream("images/kiether.png"));
     Image[] imageArray = { lark, arjay, kaide, lhara, jherick, joan, kiether };
     int counter = imageArray.length;
 

@@ -16,7 +16,7 @@
          </font></Button>
       <ImageView fx:id="myImageView" fitHeight="215.0" fitWidth="215.0" layoutX="235.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0">
          <image>
-            <Image url="@ackzel.png" />
+            <Image url="@images/ackzel.png" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />
