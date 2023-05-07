@@ -27,7 +27,10 @@ public class Scene1Controller {
     Image arjay = new Image(getClass().getResourceAsStream("Arjay.png"));
     Image kaide = new Image(getClass().getResourceAsStream("Kaide.png"));
     Image lhara = new Image(getClass().getResourceAsStream("Lhara.png"));
-    Image[] imageArray = { lark, arjay, kaide, lhara };
+    Image jherick = new Image(getClass().getResourceAsStream("jherick.png"));
+    Image joan = new Image(getClass().getResourceAsStream("joan.png"));
+    Image kiether = new Image(getClass().getResourceAsStream("kiether.png"));
+    Image[] imageArray = { lark, arjay, kaide, lhara, jherick, joan, kiether };
     int counter = imageArray.length;
 
     public void interested(ActionEvent event) throws IOException {
@@ -43,7 +46,13 @@ public class Scene1Controller {
             myImageView.setImage(imageArray[counter - 1]);
         }
 
-        if (counter == 3) {
+        if (counter == 6) {
+            scene2Controller.selectImage(scene2Controller.kiether);
+        } else if (counter == 5) {
+            scene2Controller.selectImage(scene2Controller.joan);
+        } else if (counter == 4) {
+            scene2Controller.selectImage(scene2Controller.jherick);
+        } else if (counter == 3) {
             scene2Controller.selectImage(scene2Controller.lhara);
         } else if (counter == 2) {
             scene2Controller.selectImage(scene2Controller.kaide);

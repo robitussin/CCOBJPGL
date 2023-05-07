@@ -13,6 +13,12 @@ public class Scene2Controller {
     ImageView lark;
     @FXML
     ImageView lhara;
+    @FXML
+    ImageView jherick;
+    @FXML
+    ImageView joan;
+    @FXML
+    ImageView kiether;
 
     public void selectImage(ImageView image) {
         image.setOpacity(1.0);
