@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scene1Controller">
+   <children>
+      <Button fx:id="myButton" layoutX="150.0" layoutY="305.0" mnemonicParsing="false" onAction="#interested" text="DATE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Button>
+      <ImageView fx:id="myImageView" fitHeight="150.0" fitWidth="200.0" layoutX="226.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0">
+         <image>
+            <Image url="@ackzel.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Button fx:id="no" layoutX="362.0" layoutY="305.0" mnemonicParsing="false" onAction="#pass" text="PASS">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
