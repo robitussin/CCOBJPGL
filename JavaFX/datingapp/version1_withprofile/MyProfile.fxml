@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="647.0" prefWidth="1013.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyProfileController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="88.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/biennico.png" />
+         </image>
+      </ImageView>
+      <CheckBox fx:id="myCheckBox" layoutX="88.0" layoutY="413.0" mnemonicParsing="false" onAction="#looking" text="Looking/Not Looking">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+      <ImageView fx:id="myImageView" fitHeight="150.0" fitWidth="200.0" layoutX="315.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/blackheart.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="dateButton" layoutX="398.0" layoutY="526.0" mnemonicParsing="false" onAction="#dateNow" text="Date Now!">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Label layoutX="88.0" layoutY="264.0" text="Biennico Abitria">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="307.0" text="18">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="357.0" text="Manila">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="r1" layoutX="85.0" layoutY="458.0" mnemonicParsing="false" onAction="#selectPet" text="I am a cat person">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="petpreference" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="r2" layoutX="265.0" layoutY="458.0" mnemonicParsing="false" onAction="#selectPet" text="I am a dog person" toggleGroup="$petpreference">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </RadioButton>
+      <ImageView fx:id="petImageView" fitHeight="150.0" fitWidth="200.0" layoutX="565.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/cat.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
