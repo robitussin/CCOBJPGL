@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FruitController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="177.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Desktop/apple.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn1" layoutX="148.0" layoutY="345.0" mnemonicParsing="false" onAction="#showInfo" style="-fx-background-color: red;" text="I LOVE APPLES">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="584.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Desktop/mango.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn2" layoutX="548.0" layoutY="345.0" mnemonicParsing="false" onAction="#showInfo" style="-fx-background-color: yellow;" text="I LOVE MANGOES" textFill="#b9adad">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
