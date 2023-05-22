@@ -1,61 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="944.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CheckoutController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="796.0" prefWidth="1244.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CheckoutController">
    <children>
-      <ImageView fx:id="ackzel" fitHeight="150.0" fitWidth="200.0" layoutX="28.0" layoutY="180.0" opacity="0.25" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/ackzel.png" />
-         </image>
-         <effect>
-            <Blend />
-         </effect>
-      </ImageView>
-      <ImageView fx:id="arjay" fitHeight="150.0" fitWidth="200.0" layoutX="218.0" layoutY="180.0" opacity="0.25" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/Arjay.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="kaide" fitHeight="150.0" fitWidth="200.0" layoutX="407.0" layoutY="354.0" opacity="0.25" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/Kaide.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="lark" fitHeight="150.0" fitWidth="200.0" layoutX="29.0" layoutY="354.0" opacity="0.25" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/lark.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="lhara" fitHeight="150.0" fitWidth="200.0" layoutX="218.0" layoutY="354.0" opacity="0.25" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/Lhara.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="jherick" fitHeight="150.0" fitWidth="200.0" layoutX="407.0" layoutY="180.0" opacity="0.25" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/jherick.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="joan" fitHeight="150.0" fitWidth="200.0" layoutX="588.0" layoutY="180.0" opacity="0.25" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/joan.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="kiether" fitHeight="150.0" fitWidth="200.0" layoutX="588.0" layoutY="354.0" opacity="0.25" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/kiether.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="39.0" layoutY="66.0" text="You have matched with these people! You have 24 hours to make your first move!">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
+      <Pane layoutX="811.0" layoutY="52.0" prefHeight="675.0" prefWidth="369.0" style="-fx-background-color: WHITE;">
+         <children>
+            <Label layoutX="28.0" layoutY="23.0" text="Total" textFill="#4a4141">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="64.0" text="Sub-Total:" textFill="#4a4141">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="128.0" layoutY="128.0" mnemonicParsing="false" style="-fx-background-color: GREEN;" text="CHECKOUT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Label fx:id="total" layoutX="277.0" layoutY="64.0" text="15.00" textFill="#4a4141">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <VBox fx:id="myvbox" layoutX="39.0" layoutY="28.0" prefHeight="738.0" prefWidth="722.0">
+         <children>
+            <Pane fx:id="pane1" prefHeight="200.0" prefWidth="550.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <ImageView fx:id="img1" fitHeight="150.0" fitWidth="200.0" layoutX="30.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/lamp1.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="price1" layoutX="201.0" layoutY="52.0" text="5.00" textFill="#4a4141">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="name1" layoutX="201.0" layoutY="100.0" text="Bedroom Lamp" textFill="#4a4141">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox layoutX="201.0" layoutY="150.0" prefWidth="150.0" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </Pane>
+            <Pane fx:id="pane2" prefHeight="200.0" prefWidth="550.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <ImageView fx:id="img2" fitHeight="150.0" fitWidth="200.0" layoutX="29.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/lamp2.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="price2" layoutX="204.0" layoutY="25.0" text="10.00" textFill="#4a4141">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="name2" layoutX="204.0" layoutY="73.0" text="Ceiling Lamp" textFill="#4a4141">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox layoutX="204.0" layoutY="124.0" prefWidth="150.0" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </Pane>
+            <Pane fx:id="pane3" disable="true" prefHeight="200.0" prefWidth="550.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <ImageView fx:id="img3" fitHeight="150.0" fitWidth="200.0" layoutX="29.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/lamp3.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="price3" layoutX="211.0" layoutY="38.0" text="5.00" textFill="#4a4141">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="name3" layoutX="211.0" layoutY="86.0" text="Wall Lamp" textFill="#4a4141">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox layoutX="211.0" layoutY="137.0" prefWidth="150.0" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </Pane>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
