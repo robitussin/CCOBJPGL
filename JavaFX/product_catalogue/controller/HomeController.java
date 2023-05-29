@@ -2,10 +2,13 @@ package controller;
 
 import model.*;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -17,7 +20,7 @@ import javafx.stage.Stage;
 import model.BedroomLamp;
 import alert.AlertMaker;
 
-public class HomeController {
+public class HomeController implements Initializable {
 
     @FXML
     Label name1, name2, name3, price1, price2, price3;
@@ -42,14 +45,14 @@ public class HomeController {
     @FXML
     CheckoutController checkoutController = null;
 
-    BedroomLamp blamp = new BedroomLamp();
-    CeilingLamp clamp = new CeilingLamp();
-    WallLamp wlamp = new WallLamp();
+    static BedroomLamp blamp = new BedroomLamp();
+    static CeilingLamp clamp = new CeilingLamp();
+    static WallLamp wlamp = new WallLamp();
 
-    public void initialize() throws IOException {
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
 
         // ============== BEDROOM LAMP ==================//
-
         blamp.setProductName("Bedroom Lamp");
         name1.setText(blamp.getProductName());
 
@@ -83,18 +86,25 @@ public class HomeController {
         Image wallLamp = new Image(wlamp.getProductImage());
         img3.setImage(wallLamp);
 
-        loader = new FXMLLoader(getClass().getResource("/view/Checkout.fxml"));
-        root = loader.load();
+        try {
+            loader = new FXMLLoader(getClass().getResource("/view/Checkout.fxml"));
+            root = loader.load();
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
 
+        // Clears all items in Checkout.fxml
         checkoutController = loader.getController();
         checkoutController.myvbox.getChildren().removeAll(checkoutController.myvbox.getChildren());
     }
 
     public void buy(ActionEvent event) throws IOException {
 
-        Button sourceButton = (Button) event.getSource();
         AlertMaker.showSimpleAlert("hello", "item added");
 
+        Button sourceButton = (Button) event.getSource();
+
+        // If addtocart button is pressed, set product status to true
         if (sourceButton.equals(button1)) {
             blamp.setProductStatus(true);
             checkoutController.addItem(checkoutController.pane1);
@@ -111,12 +121,13 @@ public class HomeController {
         }
     }
 
+    // Goes to Checkout.fxml
     public void gotocart(ActionEvent event) throws IOException {
 
-        checkoutController.initialize(blamp, clamp, wlamp);
         Scene scene = new Scene(root);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
     }
+
 }

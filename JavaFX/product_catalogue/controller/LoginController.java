@@ -41,9 +41,6 @@ public class LoginController {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Home.fxml"));
             Parent root = loader.load();
-            homeController = loader.getController();
-            homeController.initialize();
-
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();

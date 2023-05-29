@@ -16,7 +16,10 @@ public class App extends Application {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/view/Login.fxml"));
             Scene scene = new Scene(root);
+            // Disables resizing of window
+            stage.setResizable(false);
             stage.setScene(scene);
+
             stage.show();
 
         } catch (Exception e) {
