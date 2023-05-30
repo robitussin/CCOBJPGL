@@ -66,10 +66,13 @@ public class CheckoutController implements Initializable {
         choicebox3.setOnAction(this::computeTotal);
 
         // Set total initial amount
-        double totalInitialAmount = Double.parseDouble(choicebox1.getValue()) * HomeController.blamp.getProductPrice() +
-                +Double.parseDouble(choicebox2.getValue()) * HomeController.clamp.getProductPrice()
-                + Double.parseDouble(choicebox3.getValue()) * HomeController.wlamp.getProductPrice();
-
+        double totalInitialAmount = 0.00;
+        if (HomeController.clamp.getProductStatus() || HomeController.blamp.getProductStatus() || HomeController.wlamp.getProductStatus()) {
+            totalInitialAmount = Double.parseDouble(choicebox1.getValue()) * HomeController.blamp.getProductPrice() +
+            +Double.parseDouble(choicebox2.getValue()) * HomeController.clamp.getProductPrice()
+            + Double.parseDouble(choicebox3.getValue()) * HomeController.wlamp.getProductPrice();
+        }
+     
         // Display total initial amount in total label
         total.setText(Double.toString(totalInitialAmount));
     }
@@ -120,7 +123,7 @@ public class CheckoutController implements Initializable {
 
         // Compute total amount for all items chosen
         totalAmount = item1Amount + item2Amount + item3Amount;
-
+        
         // Display total amount in total label
         total.setText(Double.toString(totalAmount));
     }
