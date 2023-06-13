@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="796.0" prefWidth="1244.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CheckoutController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="796.0" prefWidth="1244.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CheckoutController">
    <children>
       <Pane layoutX="811.0" layoutY="52.0" prefHeight="675.0" prefWidth="369.0" style="-fx-background-color: WHITE;">
          <children>
@@ -25,7 +25,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Button layoutX="128.0" layoutY="128.0" mnemonicParsing="false" style="-fx-background-color: GREEN;" text="CHECKOUT" textFill="WHITE">
+            <Button fx:id="checkoutbutton" layoutX="128.0" layoutY="128.0" mnemonicParsing="false" onAction="#checkout" style="-fx-background-color: GREEN;" text="CHECKOUT" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

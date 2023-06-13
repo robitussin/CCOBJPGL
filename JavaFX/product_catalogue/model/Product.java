@@ -8,7 +8,7 @@ abstract class Product {
     private double productPrice;
     private String productImage;
     private boolean isSelected = false;
-    private int qty;
+    private double qty;
 
     public String getProductID() {
         return this.productID;
@@ -58,11 +58,11 @@ abstract class Product {
         this.isSelected = status;
     }
 
-    public int getProductQuantity() {
+    public double getProductQuantity() {
         return this.qty;
     }
 
-    public void setProductQuantity(int quantity) {
+    public void setProductQuantity(double quantity) {
         this.qty = quantity;
     }
 }

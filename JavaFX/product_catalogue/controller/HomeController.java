@@ -17,7 +17,6 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import model.BedroomLamp;
 import alert.AlertMaker;
 
 public class HomeController implements Initializable {
@@ -107,27 +106,34 @@ public class HomeController implements Initializable {
         // If addtocart button is pressed, set product status to true
         if (sourceButton.equals(button1)) {
             blamp.setProductStatus(true);
+            HomeController.blamp.setProductQuantity(1);
             checkoutController.addItem(checkoutController.pane1);
         }
 
         else if (sourceButton == button2) {
             clamp.setProductStatus(true);
+            HomeController.clamp.setProductQuantity(1);
             checkoutController.addItem(checkoutController.pane2);
+
         }
 
         else if (sourceButton == button3) {
             wlamp.setProductStatus(true);
+            HomeController.wlamp.setProductQuantity(1);
             checkoutController.addItem(checkoutController.pane3);
+
         }
     }
 
     // Goes to Checkout.fxml
     public void gotocart(ActionEvent event) throws IOException {
 
+        // Set initial total amount in checkout page
+        checkoutController.getInitialAmount();
+
         Scene scene = new Scene(root);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
     }
-
 }

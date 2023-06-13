@@ -1,17 +1,23 @@
 package controller;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.Node;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 public class CheckoutController implements Initializable {
 
@@ -64,17 +70,6 @@ public class CheckoutController implements Initializable {
         choicebox1.setOnAction(this::computeTotal);
         choicebox2.setOnAction(this::computeTotal);
         choicebox3.setOnAction(this::computeTotal);
-
-        // Set total initial amount
-        double totalInitialAmount = 0.00;
-        if (HomeController.clamp.getProductStatus() || HomeController.blamp.getProductStatus() || HomeController.wlamp.getProductStatus()) {
-            totalInitialAmount = Double.parseDouble(choicebox1.getValue()) * HomeController.blamp.getProductPrice() +
-            +Double.parseDouble(choicebox2.getValue()) * HomeController.clamp.getProductPrice()
-            + Double.parseDouble(choicebox3.getValue()) * HomeController.wlamp.getProductPrice();
-        }
-     
-        // Display total initial amount in total label
-        total.setText(Double.toString(totalInitialAmount));
     }
 
     public void addItem(Pane pane) {
@@ -94,6 +89,7 @@ public class CheckoutController implements Initializable {
         if (HomeController.blamp.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox1.getValue());
+            HomeController.blamp.setProductQuantity(qty);
             item1Amount = HomeController.blamp.getProductPrice() * qty;
 
             if (source == choicebox1) {
@@ -104,6 +100,7 @@ public class CheckoutController implements Initializable {
         if (HomeController.clamp.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox2.getValue());
+            HomeController.clamp.setProductQuantity(qty);
             item2Amount = HomeController.clamp.getProductPrice() * qty;
 
             if (source == choicebox2) {
@@ -114,6 +111,7 @@ public class CheckoutController implements Initializable {
         if (HomeController.wlamp.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox3.getValue());
+            HomeController.wlamp.setProductQuantity(qty);
             item3Amount = HomeController.wlamp.getProductPrice() * qty;
 
             if (source == choicebox3) {
@@ -123,8 +121,38 @@ public class CheckoutController implements Initializable {
 
         // Compute total amount for all items chosen
         totalAmount = item1Amount + item2Amount + item3Amount;
-        
+
         // Display total amount in total label
         total.setText(Double.toString(totalAmount));
+    }
+
+    public void getInitialAmount() {
+
+        double totalAmount = 0.00;
+
+        if (HomeController.blamp.getProductStatus()) {
+            totalAmount += HomeController.blamp.getProductPrice();
+        }
+
+        if (HomeController.clamp.getProductStatus()) {
+            totalAmount += HomeController.clamp.getProductPrice();
+        }
+
+        if (HomeController.wlamp.getProductStatus()) {
+            totalAmount += HomeController.wlamp.getProductPrice();
+        }
+
+        total.setText(Double.toString(totalAmount));
+    }
+
+    public void checkout(ActionEvent event) throws IOException {
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Order.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
     }
 }
