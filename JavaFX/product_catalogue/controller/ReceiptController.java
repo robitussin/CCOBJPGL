@@ -7,7 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 
-public class OrderController implements Initializable {
+public class ReceiptController implements Initializable {
 
     @FXML
     double item1Amount, item2Amount, item3Amount;

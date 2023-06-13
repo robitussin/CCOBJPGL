@@ -148,7 +148,7 @@ public class CheckoutController implements Initializable {
     public void checkout(ActionEvent event) throws IOException {
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Order.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Receipt.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
         stage.setScene(scene);
