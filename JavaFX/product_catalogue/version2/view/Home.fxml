@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="669.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
+   <children>
+      <ImageView fitHeight="360.0" fitWidth="287.0" layoutX="134.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/lamp4.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="383.0" fitWidth="360.0" layoutX="520.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/plant2.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="316.0" layoutY="44.0" text="Welcome to IKEA!">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Button fx:id="button1" layoutX="210.0" layoutY="516.0" mnemonicParsing="false" onAction="#gotolight" text="Lighting">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="button2" layoutX="652.0" layoutY="509.0" mnemonicParsing="false" onAction="#gotoplant" text="Plants">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
