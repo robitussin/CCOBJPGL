@@ -101,10 +101,10 @@ public class LightController implements Initializable {
     public void gotocart(ActionEvent event) throws IOException {
 
         // Load items to cart before switching to checkout page
-        checkoutController.showItems(LoginController.cart.getItemList());
+        LoginController.checkoutController.showItems(LoginController.cart.getItemList());
 
         // Set initial total amount in checkout page
-        checkoutController.getInitialAmount();
+        LoginController.checkoutController.getInitialAmount();
 
         Scene scene = new Scene(LoginController.homeRoot);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
