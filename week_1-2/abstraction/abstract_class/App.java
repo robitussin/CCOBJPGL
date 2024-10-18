@@ -3,6 +3,7 @@ public class App {
 
         // Only objects from subclasses can be created. Creating objects from
         // superclasses are not permitted.
+        //hehe
         Dog dalmatian = new Dog();
 
         dalmatian.eat();
