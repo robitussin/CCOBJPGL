@@ -1,4 +1,20 @@
-interface Pomsky extends Husky, Pomeranian {
+class Pomsky implements Husky, Pomeranian {
 
-    void bark();
+    // Implementing the interface methods
+    @Override
+    public void bark() {
+        System.out.println("Woof! Woof!");
+    }
+
+    // Implementing the interface methods from Pomeranian 
+    @Override
+    public void play() {
+        System.out.println("Pomsky is playing!");
+    }
+
+    // Implementing the interface methods from Husky
+    @Override
+    public void dig() {
+        System.out.println("Pomsky is digging!");
+    }
 }

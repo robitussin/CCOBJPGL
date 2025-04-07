@@ -2,10 +2,10 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         // Create object from pet class
-        Pet myPet = new Pet();
+        Pomsky myPomsky = new Pomsky();
 
-        myPet.bark();
-        System.out.println(myPet.eyeColor);
-        System.out.println(myPet.height);
+        myPomsky.bark();
+        System.out.println("My pomsky has " + myPomsky.eyeColor + " eyes.");
+        System.out.println("My pomsky is " + myPomsky.height + " tall.");
     }
 }

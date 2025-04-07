@@ -1,6 +1,6 @@
-interface Husky {
+interface Husky extends Dog{
 
     String eyeColor = "blue";
 
-    void bark();
+    void dig();
 }

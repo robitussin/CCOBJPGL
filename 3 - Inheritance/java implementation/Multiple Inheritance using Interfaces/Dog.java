@@ -1,0 +1,4 @@
+interface Dog {
+
+    void bark();
+}
