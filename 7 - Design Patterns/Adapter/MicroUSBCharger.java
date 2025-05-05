@@ -1,12 +1,6 @@
-public class MicroUSBCharger implements ChargerHub {
-
-    @Override
-    public void chargeUSBTypeC(String deviceName) {
-        // do nothing
-    }
-
-    @Override
-    public void chargeMicroUSB(String deviceName) {
-        System.out.println("Charging device: " + deviceName + " through micro USB");
+// Adaptee – old charger
+class MicroUSBCharger {
+    public void connectWithMicroUSB() {
+        System.out.println("Connected using Micro USB charger.");
     }
 }

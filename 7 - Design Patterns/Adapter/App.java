@@ -1,10 +1,15 @@
+
+// Main demo
 public class App {
     public static void main(String[] args) {
-        PhoneCharger mycharger = new PhoneCharger();
+        // Old Micro USB charger
+        MicroUSBCharger oldCharger = new MicroUSBCharger();
 
-        mycharger.charge("USB", "Vivo V-15");
-        mycharger.charge("USB Type-C", "Samsung Galaxy");
-        mycharger.charge("Micro USB", "iPhone");
-        mycharger.charge("Lightning", "iPad");
+        // Adapter to make it compatible with Type-C port
+        TypeCCharger adapter = new MicroUSBToTypeCAdapter(oldCharger);
+
+        // Phone uses adapter as if it's a Type-C charger
+        Phone phone = new Phone();
+        phone.charge(adapter);
     }
 }

@@ -3,16 +3,16 @@
 public class App {
     public static void main(String[] args) throws Exception {
 
-        Person me = Person.getInstance();
+        Database connection1 = Database.getInstance();
 
-        Person myself = Person.getInstance();
+        Database connection2 = Database.getInstance();
 
-        Person I = Person.getInstance();
+        Database connection3 = Database.getInstance();
 
         // me, myself and I are not three separate objects.
-        System.out.println(me);
-        System.out.println(myself);
-        System.out.println(I);
+        System.out.println(connection1);
+        System.out.println(connection2);
+        System.out.println(connection3);
 
     }
 }
